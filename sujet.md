@@ -27,8 +27,6 @@ Ce bug aurait certainement pu être révélé en faisant les bons tests.
 Microsoft aurait pu faire plus de tests, mais il est compliqué de tester tous les logiciels dans toutes les configurations, où dans ce cas il faut que L'Hyper-V et Windows Hypervisor soient activés en même temps. Des tests automatiques semblent cependant difficiles à mettre en place côté Microsoft.  
 Oracle a de son côté moins de configurations à tester et auraient donc pu faire plus de tests sur son logiciel lors de la sortie de Windows 11 pour s'assurer de sa bonne mise en place sur ce nouveau système d'exploitation.
 
-
-
 source :  
 https://lecrabeinfo.net/windows-11-liste-des-bugs-et-problemes-connus.html#problemes-de-compatibilite-avec-oracle-virtualbox  
 https://support.microsoft.com/fr-fr/topic/kb5007125-suspension-de-compatibilit%C3%A9-lors-de-la-mise-%C3%A0-niveau-vers-windows-11-avec-oracle-virtualbox-install%C3%A9-ea84b50c-77f5-473c-99a8-81c2b7b53d35
@@ -43,6 +41,7 @@ Ce bug est donc un bug local car il ne fait intervenir aucune méthode extérieu
 sources :  
 https://issues.apache.org/jira/projects/COLLECTIONS/issues/COLLECTIONS-799?filter=doneissues  
 https://github.com/apache/commons-collections/pull/250
+
 
 3. Chaos Engineering par Netflix
 
