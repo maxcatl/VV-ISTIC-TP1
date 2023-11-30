@@ -56,6 +56,14 @@ Il sembleraient que des techniques similaires à celles décrites soient utilis�
 
 4. WebAssembly
 
-Le langage WebAssembly à pour avantage d'être sécurisé, rapide, portable et déterministe. De plus, la représentation formelle permet d'être plus compacte et facile à décoder, facile à valider et compiler et d'être parallélisable
+Le langage WebAssembly à pour avantage d'être sécurisé, rapide, portable et déterministe. De plus, la représentation formelle permet d'être plus compacte et facile à décoder, facile à valider et compiler et d'être parallélisable. Il est donc plus facilement prouvable qu'un langage tel que javascript. Cependant, il est nécessaire de le prouver pour s'assurer de l'abscence de bugs potentiels.
 
-Je pense que les programmes WebAssembly doivent quand même être testés afin de s'assurer que le programme fasse ce qu'il doit faire (validation). La vérification est normalement assuré par le langage, sauf dans le cas d'appels extérieurs, où là aucune garantie ne peut être donnée et doivent donc être testés
+Je pense que les programmes WebAssembly doivent quand même être testés afin de s'assurer que le programme fasse ce qu'il doit faire (validation). La vérification est normalement assuré par le langage, sauf dans le cas d'appels extérieurs (appels vers host), où là aucune garantie ne peut être donnée et doivent donc être testés
+
+5. WebAssembly : preuve Isabelle
+
+Au départ, WebAssembly était principalement spécifié à la main. Des erreurs peuvent alors être commises. Notamment, grâce à cette formalisation dans Isabelle, il a été possible de corriger certains problèmes que comportait WebAssembly, et donc d'améliorer sa spécification. Certaines propriétés n'étaient en réalité pas prouvées.
+
+Les auteurs ont aussi créé 2 exécutables pour le langage : un vérificateur de type et un interpréteur. Ces deux exécutables sont spécifiés en fonction de la formalisation mécanique. Le vérificateur de type permet de vérifier les types en un seul passage mais ne permet pas une inférence de type complète. L'interpréteur mime la réduction qui est au coeur du langage
+
+Cette formalisation ne permet pas de retirer complètement les tests, notamment les auteurs disent que le langage posssède des propriétés qui disent que le programme ne peut pas planter. Cependant, cela ne valide pas le programme, c'est à dire que ça ne dit pas si le résultat que l'utilisateur devait recevoir.
